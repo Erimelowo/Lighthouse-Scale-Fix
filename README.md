@@ -4,6 +4,8 @@ A simple utility program to set every SteamVR Ligthouse-tracked device's trackin
 
 This aims to help with lighthouse-tracked controllers and/or trackers being always slightly off but not in the same direction.
 
+**This may not work for everyone and could lead to worst results (idk why). Only do if you have the above tracking problem. If you have worse results, just rename the .bkp back that the program created.**
+
 Download [here](https://github.com/Louka3000/Lighthouse-Scale-Fix/releases/latest/download/lh_scale_fix.exe).
 
 ## Theory
@@ -25,6 +27,8 @@ This edits `lighthouse_scale.json` which it assumes to be at `C:\Program Files (
 If anything goes wrong, it will have made a .bkp there that you can rename back to revert changes.
 
 ## Doing it manually
+
+**Make sure to backup**
 
 1. Open `C:\Program Files (x86)\Steam\steamapps\common\SteamVR\drivers\lighthouse\resources\lighthouse_scale.json`.
 2. Set the "scale" value to 1 under each device you use.
