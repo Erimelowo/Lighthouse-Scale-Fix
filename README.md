@@ -4,19 +4,17 @@ A simple utility program to set every SteamVR Ligthouse-tracked device's trackin
 
 This aims to help with lighthouse-tracked controllers and/or trackers being always slightly off but not in the same direction.
 
-**This may not work for everyone and could lead to worst results (idk why). Only do if you have the above tracking problem. If you have worse results, just rename the .bkp back that the program created.**
+**This may not work for everyone and could lead to worst results (idk why). Only do it if you have the above tracking problem. If you have worse results, just rename the .bkp back that the program created and try modifying the scales manually.**
 
 Download [here](https://github.com/Louka3000/Lighthouse-Scale-Fix/releases/latest/download/lh_scale_fix.exe).
 
 ## Theory
 
-The tracking scale value seems to scale translation from a certain point, which I assume to be the first lighthouse SteamVR initializes.
+The tracking scale value allows to scale translation from a certain point in space. A scale of 2 would mean that for every 1 meter travelled IRL, 2 meters are travelled in VR.
 
-A scale of 2 would mean that for every 1 meter travelled IRL, 2 meters are travelled in VR.
+Different values need different scales, but for some setups, the default values may not be good for whatever reason.
 
-Values being different for different devices thus mean that they won't align properly.
-
-The solution is thus to set tracking scales to 1. There does not seem to be any downside to doing this; my tracking has been much better ever since doing this.
+The solution is thus to edit the values yourself.
 
 ## Doing it automatically
 
@@ -31,7 +29,7 @@ If anything goes wrong, it will have made a .bkp there that you can rename back 
 **Make sure to backup**
 
 1. Open `C:\Program Files (x86)\Steam\steamapps\common\SteamVR\drivers\lighthouse\resources\lighthouse_scale.json`.
-2. Set the "scale" value to 1 under each device you use.
+2. Set the "scale" value to 1 under each device you use (note: you can use different values if need be).
 3. Save the file and restart SteamVR for the change to take effect.
 
 ## Building
